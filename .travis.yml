@@ -1,10 +1,10 @@
 deploy:
-  provider: cloudfoundry
-  api: https://api.run.pivotal.io
-  username: daniel.idris@bouvet.no
-  password:
-    secure: lE+9fDorO28YKfYg0GxEIbeNNEGjEuLIEGDoRFi0irx9io6QQNYvVbQ/S38Z556pz6XmxcRxDwpQkdZAmcMJbdBSSqOsiumS6nkY62libPv8aHRmw2QgXr0VWgnnNDwiCw/PkOfHFWjVq4tbwnR+reMYUmJd6v+aHuDfVnGGxbKXdeGut0FOsA78JKXxlY9UT6vuAQaI6KBGFCi+f4PORtfP1+NYIsPdUYu4URwvk9p+LXtDCgQeJ99WYe9pU9sWiw43L/jE+jDxiu86KmCDS702fXv6BZEdheXSHBgBrteBBICyQ5hH6JgBd0bGrYpXHR0ml1U8yPRU8ox7/I9LlbmqQKSOQNNp9PCNajhVJbouL+J/fO25V3Qr4yh/vEVJzZau+1vum3YouybEXNpfDlf7JJZMkwVgQhq0Vopu+cIfzmWyLP7xm0x8yfGkfbxEmS6xHmrdly6SQE9iVDbDxwL/Fc2sr0K1ExdEGmBp1EPcASU4W8jDItkWGtJQ4JuB2v42vpnOItl9IkWfdY7sYNEK7UZ1peKaEDJ+8blkDoseixt3FlShcbp1Lb6SkJiBsm7PUX7QFQEsaBUcxm4DJFRuLg3BiycfYJ7mDJK53HToOycO5/9iHMTg0LrK+Uvx+i4UJYbbp1MrB66nzwjYYR3xcds20jGslsO+H5gAnAU=
-  organization: team-hydra
-  space: development
-  on:
-    repo: DanielIdris/Julekalender
+  - provider: cloudfoundry
+    api: https://api.run.pivotal.io
+    username: daniel.idris@bouvet.no
+    password:
+      secure: lE+9fDorO28YKfYg0GxEIbeNNEGjEuLIEGDoRFi0irx9io6QQNYvVbQ/S38Z556pz6XmxcRxDwpQkdZAmcMJbdBSSqOsiumS6nkY62libPv8aHRmw2QgXr0VWgnnNDwiCw/PkOfHFWjVq4tbwnR+reMYUmJd6v+aHuDfVnGGxbKXdeGut0FOsA78JKXxlY9UT6vuAQaI6KBGFCi+f4PORtfP1+NYIsPdUYu4URwvk9p+LXtDCgQeJ99WYe9pU9sWiw43L/jE+jDxiu86KmCDS702fXv6BZEdheXSHBgBrteBBICyQ5hH6JgBd0bGrYpXHR0ml1U8yPRU8ox7/I9LlbmqQKSOQNNp9PCNajhVJbouL+J/fO25V3Qr4yh/vEVJzZau+1vum3YouybEXNpfDlf7JJZMkwVgQhq0Vopu+cIfzmWyLP7xm0x8yfGkfbxEmS6xHmrdly6SQE9iVDbDxwL/Fc2sr0K1ExdEGmBp1EPcASU4W8jDItkWGtJQ4JuB2v42vpnOItl9IkWfdY7sYNEK7UZ1peKaEDJ+8blkDoseixt3FlShcbp1Lb6SkJiBsm7PUX7QFQEsaBUcxm4DJFRuLg3BiycfYJ7mDJK53HToOycO5/9iHMTg0LrK+Uvx+i4UJYbbp1MrB66nzwjYYR3xcds20jGslsO+H5gAnAU=
+    organization: team-hydra
+    space: development
+    on:
+      repo: DanielIdris/Julekalender
