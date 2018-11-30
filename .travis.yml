@@ -1,17 +1,10 @@
-language: java
-jdk:
-  - oraclejdk8
-cache:
-  directories:
-    - "$HOME/.m2"
 deploy:
-  - provider: cloudfoundry
-    api: https://api.run.pivotal.io
-    username: daniel.idris@bouvet.no
-    password:
-      secure: "OpmzBAS5wBoloI1E6+3uPnSmaho627dayRZ2H91j0yHqj0wv1XK9NGc5lcloJlPMZuBMpTNoOsZoO57s3ns1/oCbq6ugcl0h9w/QDMrdjY22UUuPtidM1edV615j8pb00ueY/G0MRYbGi4Hq0HalJki1HQv8yenOR2zemSDePWQN4GBIBCVBi5MOZtFN0MofzM+R0VkdOUM3p6n8taPsovtGa0i2Mm04fnrtlW4MtqCt1f4cutuTDbNdVZCKZ+an6diwnemm/0mnHuh9ZuY08DoWjvOX7Vra/er+Z3i34KXQGqPy0d9eyzsAWWdu95z5u9jgT9cyC4i8Ipw9mQqrx3WpZI5GUainKlPVNT6/Bj8FzcgPwBHTTHFCryftzJmcwR15Db/xxGW27XYzAL1s1zyChQAoOlQRc88NScld9Bkd1I+UqkO8g+RDEGLmRzg+tcXQBFQx5yr8s9NT849mOOk1XuM86BBzc0VtV3C8w56Mod+cKJqW7XoQ03qLaWCKzP5lYNVUNuv/mO5kLFM7XrU7CVsc1eCnfypzUqA8e2B1IbhUwY0G5SGbwzvdwANOGboLOKtdPHCLHNm5E4Sezel3RUpmJQSyOJAe8ZsG5BYEAufXfxwGDa7CCLDp0Fv+VomL/F8ETLsys0dD/8F0AWxZcP+39dWs029gMOhbIOE="
-    organization: team-hydra
-    space: development
-    manifest: manifest.yml
-    on:
-      branch: master
+  provider: cloudfoundry
+  api: https://api.run.pivotal.io
+  username: daniel.idris@bouvet.no
+  password:
+    secure: lE+9fDorO28YKfYg0GxEIbeNNEGjEuLIEGDoRFi0irx9io6QQNYvVbQ/S38Z556pz6XmxcRxDwpQkdZAmcMJbdBSSqOsiumS6nkY62libPv8aHRmw2QgXr0VWgnnNDwiCw/PkOfHFWjVq4tbwnR+reMYUmJd6v+aHuDfVnGGxbKXdeGut0FOsA78JKXxlY9UT6vuAQaI6KBGFCi+f4PORtfP1+NYIsPdUYu4URwvk9p+LXtDCgQeJ99WYe9pU9sWiw43L/jE+jDxiu86KmCDS702fXv6BZEdheXSHBgBrteBBICyQ5hH6JgBd0bGrYpXHR0ml1U8yPRU8ox7/I9LlbmqQKSOQNNp9PCNajhVJbouL+J/fO25V3Qr4yh/vEVJzZau+1vum3YouybEXNpfDlf7JJZMkwVgQhq0Vopu+cIfzmWyLP7xm0x8yfGkfbxEmS6xHmrdly6SQE9iVDbDxwL/Fc2sr0K1ExdEGmBp1EPcASU4W8jDItkWGtJQ4JuB2v42vpnOItl9IkWfdY7sYNEK7UZ1peKaEDJ+8blkDoseixt3FlShcbp1Lb6SkJiBsm7PUX7QFQEsaBUcxm4DJFRuLg3BiycfYJ7mDJK53HToOycO5/9iHMTg0LrK+Uvx+i4UJYbbp1MrB66nzwjYYR3xcds20jGslsO+H5gAnAU=
+  organization: team-hydra
+  space: development
+  on:
+    repo: DanielIdris/Julekalender
