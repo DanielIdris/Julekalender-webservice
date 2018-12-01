@@ -1,5 +1,5 @@
 ---
 applications:
-  - name: julekalender
+  - name: Julekalender-webservice
     memory: 1024M
     path: ./target/julekalender-0.0.1-SNAPSHOT.jar

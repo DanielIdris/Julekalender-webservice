@@ -13,4 +13,4 @@ deploy:
     organization: team-hydra
     space: julekalender-webservice
     on:
-      repo: DanielIdris/Julekalender
+      repo: DanielIdris/Julekalender-webservice
