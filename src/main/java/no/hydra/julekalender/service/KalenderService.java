@@ -9,19 +9,37 @@ import org.springframework.stereotype.Service;
 
 import java.util.*;
 
+import static java.lang.Thread.sleep;
+
 @Service
 public class KalenderService {
 
     private static final Double ANTALL_LODD_PER_ALV = 8.0;
 
     private AlvRepository alvRepository;
+    private DagensVinnerService dagensVinnerService;
+    private SuperHemmeligPassordService superHemmeligPassordService;
+
 
     @Autowired
-    public KalenderService(AlvRepository alvRepository) {
+    public KalenderService(AlvRepository alvRepository,
+                           DagensVinnerService dagensVinnerService,
+                           SuperHemmeligPassordService superHemmeligPassordService) {
         this.alvRepository = alvRepository;
+        this.dagensVinnerService = dagensVinnerService;
+        this.superHemmeligPassordService = superHemmeligPassordService;
     }
 
-    public Alv finnDagensVinner() {
+    public Alv finnDagensVinner(String passord) throws IllegalAccessException {
+
+        if(this.dagensVinnerService.erDetEnVinnerIDag()){
+            return null;
+        }
+        if (!this.superHemmeligPassordService.sjekkOmPassordErGyldiog(passord)) {
+            throw new IllegalAccessException();
+        }
+
+
         List<Alv> alver = this.alvRepository.findAll();
         List<Lodd> loddList = new ArrayList<>();
 
@@ -49,8 +67,7 @@ public class KalenderService {
         }
 
         alvRepository.save(alv);
-
-
+        dagensVinnerService.lagreDagensVinner(alv);
         return alv;
     }
 

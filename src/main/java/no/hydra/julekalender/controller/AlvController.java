@@ -13,10 +13,5 @@ public class AlvController {
         this.alvService = alvService;
     }
 
-    @PostMapping
-    private Alv leggTilAlv(@RequestBody Alv alv) {
-        return this.alvService.leggTilAlv(alv);
-    }
-
 
 }
