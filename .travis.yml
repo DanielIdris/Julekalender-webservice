@@ -13,4 +13,4 @@ deploy:
   organization: charon
   space: julekalender-webservice
   on:
-    repo: DanielIdris/Julekalender
+    repo: DanielIdris/Julekalender-webservice
