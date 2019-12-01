@@ -1,16 +1,16 @@
 language: java
 jdk:
-  - oraclejdk8
+- oraclejdk8
 cache:
   directories:
-  - $HOME/.m2
+  - "$HOME/.m2"
 deploy:
-  - provider: cloudfoundry
-    api: https://api.run.pivotal.io
-    username: daniel.idris@bouvet.no
-    password:
-      secure: lE+9fDorO28YKfYg0GxEIbeNNEGjEuLIEGDoRFi0irx9io6QQNYvVbQ/S38Z556pz6XmxcRxDwpQkdZAmcMJbdBSSqOsiumS6nkY62libPv8aHRmw2QgXr0VWgnnNDwiCw/PkOfHFWjVq4tbwnR+reMYUmJd6v+aHuDfVnGGxbKXdeGut0FOsA78JKXxlY9UT6vuAQaI6KBGFCi+f4PORtfP1+NYIsPdUYu4URwvk9p+LXtDCgQeJ99WYe9pU9sWiw43L/jE+jDxiu86KmCDS702fXv6BZEdheXSHBgBrteBBICyQ5hH6JgBd0bGrYpXHR0ml1U8yPRU8ox7/I9LlbmqQKSOQNNp9PCNajhVJbouL+J/fO25V3Qr4yh/vEVJzZau+1vum3YouybEXNpfDlf7JJZMkwVgQhq0Vopu+cIfzmWyLP7xm0x8yfGkfbxEmS6xHmrdly6SQE9iVDbDxwL/Fc2sr0K1ExdEGmBp1EPcASU4W8jDItkWGtJQ4JuB2v42vpnOItl9IkWfdY7sYNEK7UZ1peKaEDJ+8blkDoseixt3FlShcbp1Lb6SkJiBsm7PUX7QFQEsaBUcxm4DJFRuLg3BiycfYJ7mDJK53HToOycO5/9iHMTg0LrK+Uvx+i4UJYbbp1MrB66nzwjYYR3xcds20jGslsO+H5gAnAU=
-    organization: team-hydra
-    space: julekalender-webservice
-    on:
-      repo: DanielIdris/Julekalender-webservice
+  provider: cloudfoundry
+  api: https://api.run.pivotal.io
+  username: daniel.idris94@gmail.com
+  password:
+    secure: LhEkchWK4jDaueI09ZDLJCh91Ir89EenJTaKUidDZ7DhnWP9m5fOs1MvdsjAwaPH7Neus2Wf5VqOEwSP+IHKGnVbf1LHwDRFfbHL97pn5y05rld2fy2SrJUCrD6XIKMvU1opf7LUK3Yx6uT0upyOg8DwDRy6CDDev/sRnIXvRbwXmvZ2XjYJLx1bFsV/t8sUBs1rQlz8m5T0wKGSGNp3YeM+vUAeiIHhUDrk+Lm1aEutkNuXmD8YPvxIO21ZzLZ6ctTP1vdcM127FGRNMmVKEZWRnGRuC+/6KeowuiHbU+G/17MvNiN0VlaTIr7yOIZOTNcNIH9flZFZjkcfDhbU6zIwqXFa+8hIiAhL9HJoHqOIIHPWHJKACzjf6WAPW+hMEdClRKvs+lhasjyEo5sXAGz5q5O5gBt2J9amer5HEu6lM6OmHHZgfw+/Cw0ijkghCgc1a+PD+dgBqBUVrK99EkAxSwHBL95My75QyO+1yC5sTIwL72FS0gS4uGOUXf4uS22kEGimpL0gEkOFlQn5m/ehuzqDvIfQwoq2n8UIUqaTDfOLLuwBWzByNjdDkTcKcgvvO3oq7xzV8+u4lAKeR1haE64AZO8cmVvw1Q/ury4gSBCxRrfHGhiYSz6GNImXZbpASNWoaKPvqFIKIIr9b//6gAgXCrj/kLebodIFZls=
+  organization: charon
+  space: julekalender-webservice
+  on:
+    repo: DanielIdris/Julekalender
