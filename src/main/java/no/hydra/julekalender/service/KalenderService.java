@@ -1,6 +1,7 @@
 package no.hydra.julekalender.service;
 
 import no.hydra.julekalender.model.Alv;
+import no.hydra.julekalender.model.DagensVinner;
 import no.hydra.julekalender.model.Lodd;
 import no.hydra.julekalender.model.Pakke;
 import no.hydra.julekalender.repository.AlvRepository;
@@ -30,7 +31,7 @@ public class KalenderService {
         this.superHemmeligPassordService = superHemmeligPassordService;
     }
 
-    public Alv finnDagensVinner(String passord) throws IllegalAccessException {
+    public DagensVinner finnDagensVinner(String passord) throws IllegalAccessException {
 
         if(this.dagensVinnerService.erDetEnVinnerIDag()){
             return null;
@@ -38,9 +39,17 @@ public class KalenderService {
         if (!this.superHemmeligPassordService.sjekkOmPassordErGyldiog(passord)) {
             throw new IllegalAccessException();
         }
-
-
         List<Alv> alver = this.alvRepository.findAll();
+        Alv alv1 = hentVinner(alver);
+        alvRepository.save(alv1);
+        alver = this.alvRepository.findAll();
+        Alv alv2 = hentVinner(alver);
+        alvRepository.save(alv2);
+        return dagensVinnerService.lagreDagensVinner(alv1, alv2);
+    }
+
+    private Alv hentVinner(List<Alv> alver) {
+
         List<Lodd> loddList = new ArrayList<>();
 
         for(Alv alv: alver) {
@@ -66,9 +75,8 @@ public class KalenderService {
             alv.getPakker().add(pakke);
         }
 
-        alvRepository.save(alv);
-        dagensVinnerService.lagreDagensVinner(alv);
         return alv;
+
     }
 
 

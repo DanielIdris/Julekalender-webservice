@@ -1,12 +1,12 @@
 package no.hydra.julekalender.controller;
 
 import no.hydra.julekalender.Konstanter;
-import no.hydra.julekalender.model.Alv;
+import no.hydra.julekalender.model.DagensVinner;
 import no.hydra.julekalender.service.KalenderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-@RestController()
+@RestController
 public class KalenderController {
 
     private KalenderService kalenderService;
@@ -19,7 +19,7 @@ public class KalenderController {
     @GetMapping("/vinner")
     @CrossOrigin(Konstanter.FRONT_END_URL_PROD)
     @ResponseBody
-    public Alv finnDagensVinner(@RequestHeader String passord) throws IllegalAccessException {
+    public DagensVinner finnDagensVinner(@RequestHeader String passord) throws IllegalAccessException {
        return this.kalenderService.finnDagensVinner(passord);
     }
 

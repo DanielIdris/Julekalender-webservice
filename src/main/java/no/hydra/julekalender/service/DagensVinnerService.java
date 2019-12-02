@@ -19,10 +19,11 @@ public class DagensVinnerService {
         this.dagensVinnerRepository = dagensVinnerRepository;
     }
 
-    public void lagreDagensVinner(Alv alv){
+    public DagensVinner lagreDagensVinner(Alv alv1, Alv alv2){
         DagensVinner dagensVinner = new DagensVinner();
-        dagensVinner.setAlv(alv);
-        this.dagensVinnerRepository.save(dagensVinner);
+        dagensVinner.setAlv1(alv1);
+        dagensVinner.setAlv2(alv2);
+        return this.dagensVinnerRepository.save(dagensVinner);
     }
 
     public boolean erDetEnVinnerIDag(){
